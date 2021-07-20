@@ -31,18 +31,28 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   cursor: default;
 }
+
 a {
   text-decoration: none;
   color: var(--color-white);
 }
+
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 /* Typography */
 h1 {
@@ -51,18 +61,21 @@ h1 {
   color: var(--color-black);
   margin: 1rem 0;
 }
+
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bolod);
   color: var(--color-black);
   margin: 0.5rem 0;
 }
+
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 0.5rem 0;
 }
+
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
@@ -79,14 +92,17 @@ p {
   color: var(--color-white);
   padding: 1rem;
 }
+
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bolod);
 }
+
 .navbar__logo__name {
   display: flex;
   align-items: center;
 }
+
 .navbar__logo__img {
   width: var(--font-medium);
   height: var(--font-medium);
@@ -96,15 +112,48 @@ p {
 .navbar__menu {
   display: flex;
 }
+
 .navbar__menu__item {
   padding: 0.5rem 0.75rem;
   margin: 0 0.25rem;
   cursor: pointer;
   border-radius: var(--size-border-radius);
 }
+
 .navbar__menu__item.active {
   border: 0.063rem var(--color-white) solid;
 }
+
 .navbar__menu__item:hover {
   background-color: var(--color-light-green);
+}
+
+/* Home */
+#home {
+  background: url(imgs/home-background.png) center/cover no-repeat;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 15.625rem;
+  height: 15.625rem;
+  border-radius: 50%;
+  border: 0.125rem solid var(--color-ligth-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contactBtn {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  text-transform: uppercase;
+  border: 0.125rem solid var(--color-white);
+  border-radius: var(--size-border-radius);
 }
