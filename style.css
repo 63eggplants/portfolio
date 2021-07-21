@@ -388,3 +388,46 @@ p {
   margin: auto;
   margin-top: 0.5rem;
 }
+
+/* Testimonials */
+#testimonials {
+  background: var(--color-light-white);
+}
+
+.testimonials {
+  margin: 2.5rem;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.testimonial__avatar {
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 50%;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 2.5rem;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 2.5rem;
+}
+
+.testimonial__speech-bublle {
+  padding: 1.125rem;
+  background: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.testimonial__speech-bublle p {
+  color: var(--color-light-grey);
+}
+
+.testimonial__speech-bublle a {
+  color: var(--color-light-green);
+}
