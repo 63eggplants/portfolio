@@ -169,7 +169,7 @@ p {
   color: var(--color-white);
 }
 
-.home__contactBtn {
+.home__contact-btn {
   color: var(--color-white);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
@@ -479,6 +479,27 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-yellow);
+}
+
+/* Scroll */
+.arrow-up-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
+  font-size: var(--font-large);
+  color: var(--color-white);
+  background-color: var(--color-green);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.arrow-up-btn.visible {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /*For below 768px screen width */
