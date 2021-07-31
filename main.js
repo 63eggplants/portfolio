@@ -40,7 +40,6 @@ document.addEventListener("scroll", () => {
 // Show "arrow up" button when scrolling down
 const arrowUpBtn = document.querySelector(".arrow-up-btn");
 document.addEventListener("scroll", () => {
-  console.log(window.scrollY);
   if (window.scrollY > homeHeight / 2) {
     arrowUpBtn.classList.add("visible");
   } else {
@@ -52,6 +51,32 @@ arrowUpBtn.addEventListener("click", () => {});
 // Handle click on the "arrow up" button
 arrowUpBtn.addEventListener("click", () => {
   scrollInotoView("#home");
+});
+
+// Projects
+const categoryBtnContainer = document.querySelector(".myWork__categories");
+const projectContainer = document.querySelector(".myWork__projects");
+console.log(projectContainer);
+const projects = document.querySelectorAll(".project");
+
+categoryBtnContainer.addEventListener("click", event => {
+  const filter =
+    event.target.dataset.filter || event.target.parentNode.dataset.filter;
+  if (filter === undefined) {
+    return;
+  }
+  projectContainer.classList.add("anim-out");
+
+  setTimeout(() => {
+    projects.forEach(project => {
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("anim-out");
+  }, 300);
 });
 
 function scrollInotoView(selector) {
