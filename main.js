@@ -65,6 +65,14 @@ categoryBtnContainer.addEventListener("click", event => {
   if (filter === undefined) {
     return;
   }
+
+  //Remove selection from the previous item and select the new one
+  const selected = document.querySelector(".category__btn.selected");
+  selected.classList.remove("selected");
+  const newSelect =
+    event.target.tagName === "BUTTON" ? event.target : event.target.parentNode;
+  newSelect.classList.add("selected");
+
   projectContainer.classList.add("anim-out");
 
   setTimeout(() => {
