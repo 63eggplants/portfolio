@@ -103,7 +103,7 @@ p {
 
 #navbar.navbar--dark {
   background-color: var(--color-green);
-  padding: 0 1rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .navbar__logo {
@@ -397,7 +397,7 @@ p {
   transform: translateY(0px);
 }
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 .project__description p {
@@ -408,7 +408,7 @@ p {
 .project__description h3::after {
   content: "";
   display: block;
-  width: 1.5rem;
+  width: 3rem;
   height: 0.125rem;
   background: var(--color-white);
   margin: auto;
@@ -519,12 +519,21 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-green);
   }
 
+  #navbar.navbar--dark {
+    padding: 1rem;
+  }
   .navbar__menu {
     flex-direction: column;
     width: 100%;
     text-align: center;
+    display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .about__majors {
